@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Mon Portfolio</title>
+    <!-- Bootstrap + Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Kanit:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6e07f3;
+            --secondary: #5be9b9;
+            --dark: #141c3a;
+            --light: #f2f5ff;
+        }
+        
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            padding-top: 80px;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+        
+        /* Navbar custom */
+        .navbar {
+            background-color: var(--dark) !important;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Hero Section */
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #a78bfa 100%);
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            padding-bottom: 8rem;
+        }
+        
+        /* Contact Card */
+        .contact-card {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            border: none;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Form Styles */
+        .form-control {
+            border-radius: 10px;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(110, 7, 243, 0.25);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+        }
+        
+        .btn-send {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        /* Map */
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">{MY}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">À Propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link active btn btn-primary ms-3 px-3" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="contact-hero py-5">
+        <div class="container py-5 text-center">
+            <h1 class="display-4 fw-bold mb-3">Travaillons ensemble</h1>
+            <p class="lead">Discutons de votre projet ou opportunité de collaboration</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Contact Info -->
+                <div class="col-lg-4">
+                    <div class="contact-card p-4 h-100">
+                        <div class="contact-icon mx-auto">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <h3 class="text-center mb-4">Me contacter</h3>
+                        
+                        <div class="mb-4">
+                            <h5><i class="fas fa-envelope me-2 text-primary"></i> Email</h5>
+                            <a href="mailto:maxdomyacoubou@gmail.com" class="text-decoration-none">maxdomyacoubou@gmail.com</a>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h5><i class="fas fa-phone me-2 text-primary"></i> Téléphone</h5>
+                            <a href="tel:+2290169724172" class="text-decoration-none">+229 01 69 72 41 72</a>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h5><i class="fas fa-map-marker-alt me-2 text-primary"></i> Localisation</h5>
+                            <p>Cotonou, Bénin</p>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <h5>Réseaux sociaux</h5>
+                            <div class="d-flex justify-content-center gap-3 mt-3">
+                                <a href="https://github.com/MaxDom885" class="text-dark"><i class="fab fa-github fa-2x"></i></a>
+                                <a href="https://www.linkedin.com/in/masmoud-yacoubou-068a3b2b7/" class="text-dark"><i class="fab fa-linkedin fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                    <div class="contact-card p-4 p-md-5">
+                        <h2 class="mb-4">Envoyez-moi un message</h2>
+                        <p class="mb-5">Je réponds généralement sous 24 heures</p>
+                        
+                        <form action="https://formspree.io/f/xkgjzlqz" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Nom complet</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="_replyto" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Sujet</label>
+                                    <input type="text" class="form-control" id="subject" name="_subject">
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" name="message" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-send text-white mt-3">
+                                        <i class="fas fa-paper-plane me-2"></i> Envoyer
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h2 class="text-center mb-5">Où me trouver</h2>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.99144060821!2d2.292292615509614!3d48.85837360866186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1623258139532!5m2!1sfr!2sfr" 
+                                width="100%" 
+                                height="400" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <span>&copy; 2025 {MY}. Tous droits réservés.</span>
+                </div>
+                <div class="d-flex gap-3">
+                    <a href="https://github.com/MaxDom885" class="text-white"><i class="fab fa-github fa-lg"></i></a>
+                    <a href="https://www.linkedin.com/in/masmoud-yacoubou-068a3b2b7/" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Animation au scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.contact-card');
+                elements.forEach(el => {
+                    const elPosition = el.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if(elPosition < screenPosition) {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Initial state
+            document.querySelectorAll('.contact-card').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.6s ease';
+            });
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Trigger au chargement
+        });
+    </script>
+</body>
+</html>
